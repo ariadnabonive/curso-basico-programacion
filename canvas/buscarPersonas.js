@@ -1,7 +1,6 @@
 const moduloPersonas = require('./modulos/personas');
  
 function buscarObjetoPorNombre(nombre) {
-
     let objetoEncontrado = moduloPersonas.buscarObjetoPorNombre(nombre);
      
     if ( objetoEncontrado != undefined) {

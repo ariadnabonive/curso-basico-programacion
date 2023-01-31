@@ -6,48 +6,36 @@ class Billete {
     }
 }
 
-function entregarDinero() 
-{
+function entregarDinero() {
     let infoInput = document.getElementById("dinero");
     dinero = parseInt(infoInput.value);
 
-    for(let bi of caja) 
-    {
-        if (dinero > 0)
-        {
+    for(let bi of caja) {
+        if (dinero > 0) {
             div = Math.floor(dinero / bi.valor);
 
-            if(div > bi.cantidad)
-            {
+            if(div > bi.cantidad){
                 papeles = bi.cantidad;
             }
-            else
-            {
+            else{
                 papeles = div;
             }
-
             entregado.push(new Billete(bi.valor, papeles));
             dinero = dinero - (bi.valor * papeles);
         }
     }
 
-    if(dinero > 0)
-    {
+    if(dinero > 0) {
         resultado.innerHTML = "No dispongo de la cantidad solicitada";
     }
-    else
-    {
-        for(var e of entregado)
-        {
-            if(e.cantidad > 0)
-            {
-                resultado.innerHTML += e.cantidad + " billetes de €" + e.valor + "<br/>";
-            }    
-            
+    else {
+        for(var e of entregado) {
+            if(e.cantidad > 0) {
+                resultado.innerHTML += e.cantidad + " billetes de € " + e.valor + "<br/>";
+            }             
         }
     }
 }  
-
 
 let caja = [];
 let entregado = [];

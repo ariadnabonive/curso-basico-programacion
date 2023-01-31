@@ -24,12 +24,10 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo)
   lienzo.closePath();
 }
 
-function dibujarTeclado(evento)
-{
+function dibujarTeclado(evento) {
     var colorcito =document.getElementById("input-color").value;
     var movimiento = 10;
-    switch(evento.keyCode)
-    {
+    switch(evento.keyCode) {
         case teclas.UP:
             dibujarLinea(colorcito, x, y, x, y - movimiento, papel);
             y = y - movimiento;

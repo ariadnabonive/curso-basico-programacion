@@ -10,11 +10,9 @@ let costoTransaccion;
 // Costo de transacción
 if(bancoCliente == bancoDestino){
     costoTransaccion = 0;
-}
-else{
+} else{
     costoTransaccion = 100; 
 }
-
 
 // Cliente verificado y Destino verificado
 if (cuentaClienteVerificada && cuentaDestinoVerificada){
